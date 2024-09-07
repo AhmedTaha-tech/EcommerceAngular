@@ -1,0 +1,133 @@
+<!-- _SingleProductCard -->
+
+    <div class="@className1" [id]="data.id">
+        <div class="@className2">
+            <div class="common-slider-card-wrapper">
+                <div class="common-slider-card-header">
+                    <div class="common-slider-card-header-img">
+                        <a href="/Home/GetProductById?id=@id&CurrentPageName=@CurrentPageName">
+                            @if (data.ProductImage!=null && data.ProductImage != "http://devadvertleap-001-site1.gtempurl.com/")
+                            {
+                                <img src={{data.ProductImage}} class="images" style="position:relative;">
+                            }
+                            @else
+                            {
+                                <img src="~/assets/images/mainPage/image-not-found-scaled.png" style="position:relative;" class="images">
+                            }
+                           
+                            <div class="common-slider-card-catagory-shipment-list">
+                                <ul>
+                                    @if (data.isMerchant)
+                                    {
+                                        <li><label class="common-cat-label">Merchant</label></li>
+                                    }
+                                    @if (data.isFreeDelivery)
+                                    {
+                                        <li><label class="common-ship-label">Free_Delivery</label></li>
+                                    }
+                                </ul>
+                            </div>
+                            <div class="countdown-main-placeholder-wrapper">
+                                <div class="common-product-countdown"></div>
+                            </div>
+                        </a>
+                        @if (data.CurrentPageName == "DidntSellProducts")
+                        {
+
+                            <div class="add-to-fav-wrapper_postion1_all">
+                                <a href="JavaScript:void(0);" onclick="ProductOptionModel(data.id,data.appearSendOffer,data.diffOfDates )">
+                                    <div class="fav-icon-wrapper showModel_@id" style="background-color : #fff;">
+                                        <i id="showModel-@id" class="fa fa-ellipsis-h" style="color:#000"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @else if (data.CurrentPageName == "ForSale")
+                        {
+                            <div class="add-to-fav-wrapper_postion1_all">
+                                <a href="JavaScript:void(0);" onclick="DiscountEditDeleteModal('@id','@price','@isFixedPriceEnabled')">
+                                    <div class="fav-icon-wrapper showModel_@id" style="background-color : #fff;">
+                                        <i id="showModel-@id" class="fa fa-ellipsis-h" style="color:#000"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @else
+                        {
+                            <div class="add-to-fav-wrapper_postion1_all">
+                                <a href="JavaScript:void(0);" onclick="AddAndRemoveProductFavourit(this , data.id)">
+                                    @if (data.isFavourite)
+                                    {
+                                        <div class="fav-icon-wrapper fav-icon_@id" style="background-color : #EE6C4D;">
+                                            <i id="FavIco-@id" class="w-icon-star" style="color:white"></i>
+                                        </div>
+                                    }
+                                    @else
+                                    {
+                                        <div class="fav-icon-wrapper fav-icon_@id">
+                                            <i id="FavIco-@id" class="w-icon-star"></i>
+                                        </div>
+                                    }
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="common-slider-card-body">
+                    <h4>{{data.name}}</h4>
+                    <h5>{{data.subTitle}}</h5>
+                    <ul>
+                            @if (data.regionName != null)
+                            {
+                                <li><label class="CityName">{{data.regionName}}</label></li>
+                                <li><label>&nbsp;-&nbsp;</label></li>
+                            }
+
+
+                            //DateTime createdAt = Convert.ToDateTime(createdAt);
+                            <li><label class="CreatedAtDate">{{data.createdAt}}</label></li>
+                    </ul>
+                    <div class="common-wrapper-flex mt-5">
+
+                        <div class="common-card-purchase-card" style="width: 222px ">
+                            @if (data.price > 0)
+                            {
+                                <h6>Purchasing_Price</h6>
+
+                                @if (data.priceDisc == data.price)
+                                {
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <h4 class="PriceClass">{{data.price}} SR</h4>
+                                        </div>
+                                    </div>
+                                }
+                                @else
+                                {
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <h4 class="PriceClass" style=" text-decoration: line-through;">{{data.price}} SR</h4>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h4 class="PriceClass">{{data.priceDisc}} SR</h4>
+                                        </div>
+                                    </div>
+                                }}
+
+                        </div>
+
+                        @if (data.highestBidPrice != null && data.highestBidPrice != 0)
+                        {
+                            <div class="common-card-hight-price-card">
+                                <h6>Highest_Price</h6>
+                                <h4 class="PriceClass">{{data.highestBidPrice}} SR</h4>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    

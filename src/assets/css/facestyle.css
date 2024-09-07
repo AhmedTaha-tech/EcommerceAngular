@@ -1,0 +1,64 @@
+﻿/* HIDE RADIO */
+
+.controls {
+    display: flex;
+    justify-content:center;
+}
+
+.radio {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+    cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+    outline: 1px solid #f00;
+}
+
+.checkbox {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* IMAGE STYLES */
+[type=checkbox] + img {
+    cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=checkbox]:checked + img {
+    outline: 3px solid #f00;
+}
+
+.common-slider-card-header-img img {
+    border-radius: 10px 10px 10px 10px;
+    margin-right:7px;
+}
+
+.face {
+    /*width: 100%;*/
+    max-width: 45px;
+}

@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Madani Arabic';
+    src: url('MadaniArabic-Bold.eot');
+    src: local('Madani Arabic Bold'), local('MadaniArabic-Bold'),
+        url('MadaniArabic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('MadaniArabic-Bold.woff2') format('woff2'),
+        url('MadaniArabic-Bold.woff') format('woff'),
+        url('MadaniArabic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Madani Arabic';
+    src: url('MadaniArabic-Black.eot');
+    src: local('Madani Arabic Black'), local('MadaniArabic-Black'),
+        url('MadaniArabic-Black.eot?#iefix') format('embedded-opentype'),
+        url('MadaniArabic-Black.woff2') format('woff2'),
+        url('MadaniArabic-Black.woff') format('woff'),
+        url('MadaniArabic-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Madani Arabic Extra';
+    src: url('MadaniArabic-ExtraLight.eot');
+    src: local('Madani Arabic Extra Light'), local('MadaniArabic-ExtraLight'),
+        url('MadaniArabic-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('MadaniArabic-ExtraLight.woff2') format('woff2'),
+        url('MadaniArabic-ExtraLight.woff') format('woff'),
+        url('MadaniArabic-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Madani Arabic Extra';
+    src: url('MadaniArabic-ExtraBold.eot');
+    src: local('Madani Arabic Extra Bold'), local('MadaniArabic-ExtraBold'),
+        url('MadaniArabic-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('MadaniArabic-ExtraBold.woff2') format('woff2'),
+        url('MadaniArabic-ExtraBold.woff') format('woff'),
+        url('MadaniArabic-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Madani Arabic';
+    src: url('MadaniArabic-Light.eot');
+    src: local('Madani Arabic Light'), local('MadaniArabic-Light'),
+        url('MadaniArabic-Light.eot?#iefix') format('embedded-opentype'),
+        url('MadaniArabic-Light.woff2') format('woff2'),
+        url('MadaniArabic-Light.woff') format('woff'),
+        url('MadaniArabic-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Madani Arabic';
+    src: url('MadaniArabic-Medium.eot');
+    src: local('Madani Arabic Medium'), local('MadaniArabic-Medium'),
+        url('MadaniArabic-Medium.eot?#iefix') format('embedded-opentype'),
+        url('MadaniArabic-Medium.woff2') format('woff2'),
+        url('MadaniArabic-Medium.woff') format('woff'),
+        url('MadaniArabic-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Madani Arabic';
+    src: url('MadaniArabic-Thin.eot');
+    src: local('Madani Arabic Thin'), local('MadaniArabic-Thin'),
+        url('MadaniArabic-Thin.eot?#iefix') format('embedded-opentype'),
+        url('MadaniArabic-Thin.woff2') format('woff2'),
+        url('MadaniArabic-Thin.woff') format('woff'),
+        url('MadaniArabic-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Madani Arabic Semi';
+    src: url('MadaniArabic-SemiBold.eot');
+    src: local('Madani Arabic Semi Bold'), local('MadaniArabic-SemiBold'),
+        url('MadaniArabic-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('MadaniArabic-SemiBold.woff2') format('woff2'),
+        url('MadaniArabic-SemiBold.woff') format('woff'),
+        url('MadaniArabic-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Madani Arabic Variable';
+    src: url('MadaniArabicVariable.eot');
+    src: local('Madani Arabic Variable'), local('MadaniArabicVariable'),
+        url('MadaniArabicVariable.eot?#iefix') format('embedded-opentype'),
+        url('MadaniArabicVariable.woff2') format('woff2'),
+        url('MadaniArabicVariable.woff') format('woff'),
+        url('MadaniArabicVariable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Madani Arabic';
+    src: url('MadaniArabic-Regular.eot');
+    src: local('Madani Arabic'), local('MadaniArabic-Regular'),
+        url('MadaniArabic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MadaniArabic-Regular.woff2') format('woff2'),
+        url('MadaniArabic-Regular.woff') format('woff'),
+        url('MadaniArabic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

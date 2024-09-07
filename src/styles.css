@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../src/assets/css/arabicstyle.css';
+@import '../src/assets/css/chosen.css';
+@import '../src/assets/css/demo1.min.css';
+@import '../src/assets/css/flatpickr.min.css';
+@import '../src/assets/css/jquery-ui.css';
+@import '../src/assets/css/mystyle.css';
+@import '../src/assets/css/owl.carousel.min.css';
+@import '../src/assets/css/owl.theme.default.min.css';
+@import '../src/assets/css/slick.min.css';
+@import '../src/assets/css/style.min.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
