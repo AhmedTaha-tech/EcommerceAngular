@@ -1,3 +1,307 @@
+<!-- _Header -->
+<!-- Start of Header -->
+<header class="header">
+    <div class="header-tops">
+        <div class="container-fluid">
+            <div class="header-right">
+
+                <!-- End of DropDown Menu -->
+                <div class="dropdown">
+                    <a href="#language">
+
+                        @if (language == "ar")
+                        {
+                            <img src="assets/images/flags/sr.png" alt="ENG Flag" width="14"
+                             height="8" class="dropdown-image" /> <span>ARA</span>
+                        }
+                        @else
+                        {
+                            <img src="assets/images/flags/eng.png" alt="ENG Flag" width="14"
+                             height="8" class="dropdown-image" />
+
+                            <span>ENG</span>
+                        }
+                    </a>
+                    <div class="dropdown-box">
+                        <a href="#SA">
+                            <img src="assets/images/flags/eng.png" alt="SA Flag" width="14" height="8"
+                                 class="dropdown-image" />
+                            ARA
+                        </a>
+                        <a href="#ENG">
+                            <img src="assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
+                                 class="dropdown-image" />
+                            ENG
+                        </a>
+                    </div>
+                </div>
+                <!-- End of Dropdown Menu -->
+                <span class="divider d-lg-show"></span>
+
+                @if (userName =="")
+                {
+                    <a routerlink="/account" class=" login sign-in mr-2 ml-2"><i class="w-icon-account mr-1"></i>Login</a>
+                    <span class="delimiter"> / </span>
+                    <a routerLink="/signup" class="ml-2  login register">Register</a>
+                }
+                @else
+                {
+                    <a routerLink="/userprofilepage" class="ml-2"> userName </a>
+                }
+
+            </div>
+        </div>
+    </div>
+    <!-- End of Header Top -->
+    <div class="header-middle">
+        <div class="container-fluid">
+            <div class="header-left mr-md-4">
+                <a href="#" class="mobile-menu-toggle  w-icon-hamburger" aria-label="menu-toggle">
+                </a>
+                <a routerlink="/" class="logo ml-lg-0">
+                    <img src="assets/images/main-logo-2x.png" alt="logo" width="144" height="45" />
+                </a>
+                <app-search-menu [mainCategories]="mainCategories"></app-search-menu>
+            </div>
+            <div class="header-right ml-4">
+                @if (language == "ar")
+                {
+                    <a class="link d-xs-show link-style mr-2rem language" href="#" data-lang="en-US">
+                        English
+                    </a>
+                }
+                @else
+                {
+                    <a class="link d-xs-show link-style mr-2rem language" href="#" data-lang="ar">
+                        العربية
+                    </a>
+                }
+                @if (firstName == "")
+                {
+                    <a class="link d-xs-show btn-black-main mr-1rem sign-in-btn" routerLink="/signup">
+                        Register
+                    </a>
+                    <a class="link d-xs-show btn-black-main mr-2-5rem sign-up-btn" routerLink="/login">
+                        Login
+                    </a>
+                }
+                @else
+                {
+
+                    <div id="user-control">
+                        <div class="dropdown1 mr-2rem abc">
+                            <div class="user-wrapper" style="width: 100%;">
+                                <span class="user-info">
+                                    <a routerLink="/userprofilepage" style="padding: 0px 25px 0px 0px;"> {{userName}}</a>
+                                    <span class="fas fa-angle-down arrow-span" onclick="ShowUserDDl()" id="DownArrow" style="display:flex!important"></span>
+                                    <span class="fas fa-angle-up arrow-span" onclick="HideUserDDl()" id="UpArrow" style="display:none"></span>
+                                </span>
+                            </div>
+                            <!-- ToDo -->
+                            <!-- <div id="userdrpdown" class="dropdown-box1 user-dropdown" style="display: none;margin-right: -15px;">
+                                <div class="dropdown-box1-placholder">
+                                    <div class="user-list-main">
+                                        <ul class="main-bar" id="AccsList">
+                                            <li class="active-user">
+                                                <div class="user-single-wrapper">
+                                                    <div class="user-accountWrapper d-flex">
+                                                        <div class="user-avatar-main">
+                                                            <img src="@(Context.Request.Cookies["userImage"] !=null && Context.Request.Cookies["userImage"] !="" && Context.Request.Cookies["userImage"] !="http://devadvertleap-001-site1.gtempurl.com/" ? Context.Request.Cookies["userImage"]:"/assets/images/mainpage/image-not-found-scaled.png")">
+
+                                                        </div>
+                                                        <div class="user-avatar-info">
+                                                            <h2>@Context.Request.Cookies["name"]</h2>
+                                                            <label>User_Account</label>
+                                                        </div>
+                                                        <div class="user-avatar-actionBtn">
+                                                            <a id="status_change" style="background-color: #ee6c4d; color: white !important;" href="@Url.Action("Index","Home")">Current</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sidebar-wrapper">
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <ul id="bussinessaccount" style="margin-top: 15px;height: 200px; max-height: 300px; overflow-y:auto; overflow-x:hidden;" class="main-bar">
+                                        </ul>
+                                        <br>
+                                        <ul>
+                                            <li class="active-user">
+                                                <div class="user-single-wrapper">
+                                                    <div class="user-avatar-actionBtn" style="width: 100%;">
+                                                        <a id="status_change" style="border: none;background: #1d223b;color: white !important" href="@Url.Action("UserBussiness","Accounts")">Register_as_a_merchant</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="arrow-up-wrapper">
+                                        <img src="assets/images/accounts/arrow.svg">
+                                    </div>
+                                </div>
+
+                            </div> -->
+                        </div>
+                    </div>
+                    <a class="link d-xs-show btn-black-main mr-2-5rem sign-up-btn" onclick="Logout()" style="cursor:pointer;"><span class="login-icon"></span> logout</a>
+                }
+                <div class="notificatin-wrapper mr-4">
+                    <div class="dropdown notification-panel cart-dropdown cart-offcanvas2 ">
+                        <div class="cart-overlay"></div>
+                        <a href="#" onclick="GetNotifications()" class="cart-toggle label-down link">
+                            <div>
+                                <img src="assets/images/topbar/notification.svg" width="23" height="26">
+                            </div>
+                            <span class="notification-count">0</span>
+                        </a>
+                       <!-- <div class="dropdown-box" style="overflow-y: scroll;">
+                            <div class="cart-header" style="justify-content: flex-end;">
+                                <a href="#" class="btn-close">Close<i class="w-icon-long-arrow-right"></i></a>
+                            </div>
+                            <div class="notification-main-wrapper">
+                                <ul class="notification">
+                                   
+                                </ul>
+                            </div>
+
+                        </div> -->
+                        <!-- End of Dropdown Box -->
+                    </div>
+                </div>
+                <div class="dropdown cart-dropdown cart-offcanvas mr-2">
+                    <div class="cart-overlay"></div>
+                    <a href="javascript:void(0)" class="cart-toggle label-down link showCart">
+                        <div>
+                            <img src="assets/images/topbar/shopping.svg">
+                        </div>
+                        <span class="cart-count" id="ItemsCount"></span>
+                    </a>
+                    <div class="dropdown-box" style="overflow-y:auto;">
+                        <div class="cart-header" style="justify-content: flex-end;" >
+                            <a href="javascript:void(0)" class="btn-close" >Close_Cart<i class="w-icon-long-arrow-right"></i></a>
+                        </div>
+                        <div class="card-header-content">
+                            <h4>Your_Cart</h4>
+                            <label>Cart_Total <span class="cartTotal">  SR</span></label>
+                        </div>
+                        <div class="cart-header-seprator-list">
+                            <ul>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <div id="MainCart">
+                                <input type="hidden" value="0" id="CartMasterID" />
+                            </div>
+                        </div>
+
+                        <div class="cart-action-btn mt-3">
+                            <a href="#" class="hover-theme-color-btn" onclick="CheckkOut()">Check_Out</a>
+                            <a href="#" class="hover-theme-black-btn mt-2" onclick="ContinueShopping()">Continue_Shopping</a>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End of Dropdown Box -->
+            </div>
+
+            <a class="wishlist label-down link d-xs-show mr-0 ml-2-5rem" routerlink="/favoriteproducts">
+                <div>
+                    <img src="assets/images/topbar/star.svg" width="27" height="26">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- End of Header Middle -->
+
+    <div class="header-bottom productpage sticky-content fix-top sticky-header border-bottom-theme">
+        <div class="container-fluid">
+            <div class="inner-wrap">
+                <div class="header-left">
+                    <div class="dropdown category-dropdown has-border" data-visible="true">
+                        <a href="#" class="category-toggle text-dark" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-display="static"
+                           title="Browse Categories">
+                            <span>Categories</span>
+                        </a>
+
+                        <div class="dropdown-box">
+                            <ul class="menu vertical-menu category-menu">
+                                @for (category of heasderCategories; track category) 
+                                {
+                                    <li>
+                                        <a [href]="getQueryString(category.id.toString())">{{category.name}}</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="menu">
+                            <li class="active" style="margin:10px;">
+                                <a routerlink="/advertisement">Sell</a>
+                            </li>
+                            @for (category of mainCategories; track category) {
+                                <li class="">
+                                    <a [href]="getQueryString(category.id.toString())">{{category.name}}</a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <header class="header">
     <div class="header-tops">

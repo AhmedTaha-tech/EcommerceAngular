@@ -1,0 +1,22 @@
+@if (mainCategories.length>0)
+{
+    <div id="form" class="header-search hs-expanded hs-round d-none d-md-flex input-wrapper">
+        <input type="text" class="form-control" name="product" id="product" placeholder="What are you looking for ?" value="" required />
+        <div class="position-holders-wrapper">
+            <div class="category-img">
+                <img class="col-6" src="assets/images/topbar/catagory-menu.png" width="30" height="20">
+            </div>
+            <div class="select-box">
+                <select id="catedoryId" name="category" title="Select_Category">
+                    <option value="">Select_Category</option>
+                    @for (category of mainCategories; track category) {
+                        <option value="{category.id}">{{category.name}}</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-search" id="btnSearch">
+            Search
+        </button>
+    </div>
+}

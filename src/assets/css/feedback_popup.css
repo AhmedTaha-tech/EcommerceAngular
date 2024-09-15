@@ -1,5 +1,5 @@
 
- .feedback-popupsection .feedback-popup .modal-dialog {
+.feedback-popupsection .feedback-popup .modal-dialog {
     max-width: 570px;
 }
 
@@ -52,7 +52,7 @@
 
 
 .feedback-popupsection .feedback-popup .feedback-select .positive-img:before {
-    background-image: url(../img/positive.png) !important;
+    background-image: url('../images/positive.png') !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     padding:105px 0px  0px 0px!important;
@@ -60,7 +60,7 @@
 }
 
 .feedback-popupsection .feedback-popup .feedback-select .neu-img:before {
-    background-image: url(../img/neutral.png) !important;
+    background-image: url('../images/neutral.png') !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     padding: 105px 0px  0px 0px!important;
@@ -68,7 +68,7 @@
 }
 
 .feedback-popupsection .feedback-popup .feedback-select .nega-img:before {
-    background-image: url(../img/negative.png) !important;
+    background-image: url('../images/negative.png') !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     padding: 105px 0px  0px 0px!important;
@@ -77,17 +77,17 @@
 
 
 .feedback-popupsection .feedback-popup .feedback-select .positive-image {
-    background-image: url(../img/positive.png) !important;
+    background-image: url('../images/positive.png') !important;
     background-repeat: no-repeat;
     background-position: center;
 }
 .feedback-popupsection .feedback-popup .feedback-select .neutral-image {
-    background-image: url(../img/neutral.png) !important;
+    background-image: url('../images/neutral.png') !important;
     background-repeat: no-repeat;
     background-position: center;
 }
 .feedback-popupsection .feedback-popup .feedback-select .negative-image {
-    background-image: url(../img/negative.png) !important;
+    background-image: url('../images/negative.png') !important;
     background-repeat: no-repeat;
     background-position: center;
 }
